@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Em Thi Tốt!</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa theo chiều ngang */
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            min-height: 100vh; /* Đảm bảo chiều cao tối thiểu của body là 100% chiều cao của viewport */
+            text-align: center; /* Căn giữa văn bản */
+            margin: 0; /* Xóa margin mặc định */
+            background-image: url('/public/1-hinh-anh-co-gai-chibi-va-loi-nhan-chuc-thi-tot-nhe-inkythuatso-13-15-44-44.jpg'); /* Đường dẫn tương đối */
+            background-size: cover; /* Đảm bảo ảnh nền phủ kín toàn bộ */
+            background-position: center; /* Căn giữa ảnh nền */
+            background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+        }
+
+        @keyframes titleEffect {
+            0% { transform: scale(1); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            animation: titleEffect 1.5s ease-in-out;
+        }
+
+        img {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        img.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chúc Em Thi Tốt!</h1>
+    <p>Chúc em có một kỳ thi thành công và đạt được kết quả như mong muốn!</p>
+    <p class="quote">"Hãy tin vào bản thân mình, em có thể làm được!"</p>
+    <img src="/OIP.jpg" alt ="Hình ảnh chúc mừng">
+    <p>Luôn bên em, ủng hộ em từng bước!</p>
+
+    <!-- Thêm video vào đây -->
+    <video width="600" controls>
+        <source src="/469794072_27998596366421205_7151953812188509974_n.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+
+    <script>
+        window.onload = function() {
+            document.body.style.opacity = 1; // Đặt độ mờ thành 1 khi trang được tải
+            const img = document.querySelector('img');
+            img.classList.add('loaded'); // Thêm lớp 'loaded' để kích hoạt hiệu ứng fade-in
+        };
+    </script>
+</body>
+</html>
